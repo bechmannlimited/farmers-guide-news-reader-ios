@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E43FDB0B1B19D55C004BF235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43FDB0A1B19D55C004BF235 /* AppDelegate.swift */; };
-		E43FDB0D1B19D55C004BF235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43FDB0C1B19D55C004BF235 /* ViewController.swift */; };
+		C490814722EB1673BF0EDA2A /* Pods_FarmersGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B803294F46FFE358E15EDAFF /* Pods_FarmersGuide.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E43FDB101B19D55C004BF235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43FDB0E1B19D55C004BF235 /* Main.storyboard */; };
 		E43FDB121B19D55C004BF235 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43FDB111B19D55C004BF235 /* Images.xcassets */; };
 		E43FDB151B19D55C004BF235 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43FDB131B19D55C004BF235 /* LaunchScreen.xib */; };
 		E43FDB211B19D55C004BF235 /* FarmersGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43FDB201B19D55C004BF235 /* FarmersGuideTests.swift */; };
+		E49D348F1B1D16780098FCFB /* SplitViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D348E1B1D16780098FCFB /* SplitViewManager.swift */; };
+		E4E5DD451B1D0ECC00F068DD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD3E1B1D0ECC00F068DD /* Article.swift */; };
+		E4E5DD461B1D0ECC00F068DD /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD401B1D0ECC00F068DD /* ArticlesViewController.swift */; };
+		E4E5DD471B1D0ECC00F068DD /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD421B1D0ECC00F068DD /* ArticleTableViewCell.swift */; };
+		E4E5DD481B1D0ECC00F068DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD441B1D0ECC00F068DD /* AppDelegate.swift */; };
+		E4E5DD4A1B1D0F0200F068DD /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD491B1D0F0200F068DD /* ArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		721AE987010BF244317676C0 /* Pods-FarmersGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmersGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FarmersGuide/Pods-FarmersGuide.debug.xcconfig"; sourceTree = "<group>"; };
+		B27155355D19A7149F06A6A6 /* Pods-FarmersGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmersGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-FarmersGuide/Pods-FarmersGuide.release.xcconfig"; sourceTree = "<group>"; };
+		B803294F46FFE358E15EDAFF /* Pods_FarmersGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmersGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43FDB051B19D55C004BF235 /* FarmersGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmersGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43FDB091B19D55C004BF235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E43FDB0A1B19D55C004BF235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E43FDB0C1B19D55C004BF235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E43FDB0F1B19D55C004BF235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E43FDB111B19D55C004BF235 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E43FDB141B19D55C004BF235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E43FDB1A1B19D55C004BF235 /* FarmersGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmersGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43FDB1F1B19D55C004BF235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E43FDB201B19D55C004BF235 /* FarmersGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersGuideTests.swift; sourceTree = "<group>"; };
+		E49D348E1B1D16780098FCFB /* SplitViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewManager.swift; sourceTree = "<group>"; };
+		E4E5DD3E1B1D0ECC00F068DD /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		E4E5DD401B1D0ECC00F068DD /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		E4E5DD421B1D0ECC00F068DD /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		E4E5DD441B1D0ECC00F068DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E4E5DD491B1D0F0200F068DD /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C490814722EB1673BF0EDA2A /* Pods_FarmersGuide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		525B9C1BD6E57ED644A9119E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				721AE987010BF244317676C0 /* Pods-FarmersGuide.debug.xcconfig */,
+				B27155355D19A7149F06A6A6 /* Pods-FarmersGuide.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E43FDAFC1B19D55C004BF235 = {
 			isa = PBXGroup;
 			children = (
 				E43FDB071B19D55C004BF235 /* FarmersGuide */,
 				E43FDB1D1B19D55C004BF235 /* FarmersGuideTests */,
 				E43FDB061B19D55C004BF235 /* Products */,
+				525B9C1BD6E57ED644A9119E /* Pods */,
+				F3F0A9E72A044D09FE673428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +101,7 @@
 		E43FDB071B19D55C004BF235 /* FarmersGuide */ = {
 			isa = PBXGroup;
 			children = (
-				E43FDB0A1B19D55C004BF235 /* AppDelegate.swift */,
-				E43FDB0C1B19D55C004BF235 /* ViewController.swift */,
+				E4E5DD3B1B1D0ECC00F068DD /* Classes */,
 				E43FDB0E1B19D55C004BF235 /* Main.storyboard */,
 				E43FDB111B19D55C004BF235 /* Images.xcassets */,
 				E43FDB131B19D55C004BF235 /* LaunchScreen.xib */,
@@ -112,6 +135,67 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4E5DD3B1B1D0ECC00F068DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E4E5DD3C1B1D0ECC00F068DD /* Articles */,
+				E4E5DD431B1D0ECC00F068DD /* Shared */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E4E5DD3C1B1D0ECC00F068DD /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				E4E5DD3D1B1D0ECC00F068DD /* Models */,
+				E4E5DD3F1B1D0ECC00F068DD /* ViewControllers */,
+				E4E5DD411B1D0ECC00F068DD /* Views */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		E4E5DD3D1B1D0ECC00F068DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4E5DD3E1B1D0ECC00F068DD /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E4E5DD3F1B1D0ECC00F068DD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4E5DD401B1D0ECC00F068DD /* ArticlesViewController.swift */,
+				E4E5DD491B1D0F0200F068DD /* ArticleViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E4E5DD411B1D0ECC00F068DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4E5DD421B1D0ECC00F068DD /* ArticleTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4E5DD431B1D0ECC00F068DD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E4E5DD441B1D0ECC00F068DD /* AppDelegate.swift */,
+				E49D348E1B1D16780098FCFB /* SplitViewManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F3F0A9E72A044D09FE673428 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B803294F46FFE358E15EDAFF /* Pods_FarmersGuide.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E43FDB241B19D55C004BF235 /* Build configuration list for PBXNativeTarget "FarmersGuide" */;
 			buildPhases = (
+				1C1027D57FB77A9C394FCFD9 /* Check Pods Manifest.lock */,
 				E43FDB011B19D55C004BF235 /* Sources */,
 				E43FDB021B19D55C004BF235 /* Frameworks */,
 				E43FDB031B19D55C004BF235 /* Resources */,
+				5C10A08DC37A2ACD511ACCFA /* Embed Pods Frameworks */,
+				DF76FF14DAC8893333A16660 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +294,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C1027D57FB77A9C394FCFD9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C10A08DC37A2ACD511ACCFA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FarmersGuide/Pods-FarmersGuide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF76FF14DAC8893333A16660 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FarmersGuide/Pods-FarmersGuide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E43FDB011B19D55C004BF235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43FDB0D1B19D55C004BF235 /* ViewController.swift in Sources */,
-				E43FDB0B1B19D55C004BF235 /* AppDelegate.swift in Sources */,
+				E4E5DD481B1D0ECC00F068DD /* AppDelegate.swift in Sources */,
+				E4E5DD451B1D0ECC00F068DD /* Article.swift in Sources */,
+				E4E5DD4A1B1D0F0200F068DD /* ArticleViewController.swift in Sources */,
+				E49D348F1B1D16780098FCFB /* SplitViewManager.swift in Sources */,
+				E4E5DD471B1D0ECC00F068DD /* ArticleTableViewCell.swift in Sources */,
+				E4E5DD461B1D0ECC00F068DD /* ArticlesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +479,7 @@
 		};
 		E43FDB251B19D55C004BF235 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721AE987010BF244317676C0 /* Pods-FarmersGuide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FarmersGuide/Info.plist;
@@ -350,6 +490,7 @@
 		};
 		E43FDB261B19D55C004BF235 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27155355D19A7149F06A6A6 /* Pods-FarmersGuide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FarmersGuide/Info.plist;
@@ -411,6 +552,7 @@
 				E43FDB261B19D55C004BF235 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E43FDB271B19D55C004BF235 /* Build configuration list for PBXNativeTarget "FarmersGuideTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +561,7 @@
 				E43FDB291B19D55C004BF235 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
