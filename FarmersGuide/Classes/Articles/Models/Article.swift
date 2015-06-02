@@ -17,7 +17,9 @@ class Article: JSONObject {
     var Title: String = ""
     var Subtitle: String = ""
     var ThumbnailName: String = ""
-    var Thumbnail: UIImage = UIImage()
+    var ArticleText: String = ""
+    
+    var Thumbnail: UIImage?
     
     // MARK: - Web api methods
     
@@ -47,5 +49,22 @@ class Article: JSONObject {
             
             completion(objects: objects)
         }
+    }
+    
+    func getArticleText(completion: (result: ReadabilityResult) -> ()) {
+        
+        ReadabilityResult.create("http://www.bechmann.co.uk/fg/GetJSData.aspx?id=\(ArticleID)", completion: { (result) -> () in
+            
+            completion(result: result)
+        })
+    }
+    
+    func getThumbnail(completion: () -> ()) {
+        
+        ImageLoader.sharedLoader().imageForUrl("http://www.farmersguide.co.uk/content/img/thumbs/\(ThumbnailName)", completionHandler: { (image, url) -> () in
+            
+            self.Thumbnail = image
+            completion()
+        })
     }
 }

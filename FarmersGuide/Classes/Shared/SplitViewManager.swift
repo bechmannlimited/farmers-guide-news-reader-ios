@@ -58,4 +58,10 @@ extension UISplitViewController {
             viewControllers[viewControllers.count-1] = newValue
         }
     }
+    
+    func toggleMasterView() {
+        
+        let barButtonItem = self.displayModeButtonItem()
+        UIApplication.sharedApplication().sendAction(barButtonItem.action, to: barButtonItem.target, from: nil, forEvent: nil)
+    }
 }

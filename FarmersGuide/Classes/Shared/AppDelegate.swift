@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ABToolKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splitViewManager.splitViewController = (self.window!.rootViewController as? UISplitViewController)!
         let navigationController = splitViewManager.splitViewController.detailViewController as! UINavigationController
         navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewManager.splitViewController.displayModeButtonItem()
+        
+        let navigationBarFont = Session.AppFont(20, weight: .Regular)
+        
+        UINavigationBar.appearance().tintColor = FGColor.blueColor()
+        //UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:  navigationBarFont]
+        //UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName:  navigationBarFont], forState: UIControlState.Normal)
+        //UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
+        //UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
         
         return true
     }

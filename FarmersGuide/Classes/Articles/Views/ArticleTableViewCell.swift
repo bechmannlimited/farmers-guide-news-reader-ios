@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import ABToolKit
 
 private let kPadding: CGFloat = 10
-private let kUnderneathTitleMargin: CGFloat = 5
-private let kTitleFont = UIFont.systemFontOfSize(15, weight: 1)
-private let kDescriptionFont = UIFont.systemFontOfSize(13, weight: 0.2)
+private let kUnderneathTitleMargin: CGFloat = 0
+private let kTitleFont = Session.AppFont(17, weight: .Regular)
+private let kDescriptionFont = Session.AppFont(14, weight: .Thin)
 
 class ArticleTableViewCell: UITableViewCell {
 
@@ -27,17 +28,23 @@ class ArticleTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         imageView?.frame = CGRect(x: 0, y: 0, width: contentView.frame.height, height: contentView.frame.height)
+        
+        if imageView?.image == nil {
+            
+            imageView?.showLoader()
+        }
     }
     
     func setup() {
     
-        imageView?.image = UIImage.imageWithColor(UIColor.greenColor(), size: CGSize(width: 100, height: 100))
+        imageView?.image = UIImage()
         
         setupConstraints()
         
+        getImage()
+        
         titleLabel.text = article.Title
         descriptionLabel.text = article.Subtitle
-        
     }
     
     func setupConstraints() {
@@ -97,4 +104,17 @@ class ArticleTableViewCell: UITableViewCell {
         descriptionLabel.font = kDescriptionFont
         descriptionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
     }
+    
+    func getImage() {
+        
+        imageView?.showLoader()
+        
+        article.getThumbnail { () -> () in
+            
+            self.imageView?.image = self.article.Thumbnail
+            self.imageView?.hideLoader()
+        }
+    }
 }
+
+
