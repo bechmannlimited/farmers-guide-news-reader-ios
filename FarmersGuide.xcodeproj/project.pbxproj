@@ -16,6 +16,9 @@
 		E4A1250B1B1DEB560098AE3E /* ReadabilityResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A1250A1B1DEB560098AE3E /* ReadabilityResult.swift */; };
 		E4A125121B1E10E10098AE3E /* Session+FarmersGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A125111B1E10E10098AE3E /* Session+FarmersGuide.swift */; };
 		E4A125141B1E11150098AE3E /* FGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A125131B1E11150098AE3E /* FGColor.swift */; };
+		E4A125171B1EEBD70098AE3E /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A125161B1EEBD70098AE3E /* UINavigationBar+Extension.swift */; };
+		E4A125191B1EF5400098AE3E /* BaseViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A125181B1EF5400098AE3E /* BaseViewController+Extension.swift */; };
+		E4A1251B1B1EFAC10098AE3E /* ArticleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A1251A1B1EFAC10098AE3E /* ArticleHeaderView.swift */; };
 		E4E5DD451B1D0ECC00F068DD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD3E1B1D0ECC00F068DD /* Article.swift */; };
 		E4E5DD461B1D0ECC00F068DD /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD401B1D0ECC00F068DD /* ArticlesViewController.swift */; };
 		E4E5DD471B1D0ECC00F068DD /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DD421B1D0ECC00F068DD /* ArticleTableViewCell.swift */; };
@@ -49,6 +52,9 @@
 		E4A1250A1B1DEB560098AE3E /* ReadabilityResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadabilityResult.swift; sourceTree = "<group>"; };
 		E4A125111B1E10E10098AE3E /* Session+FarmersGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+FarmersGuide.swift"; sourceTree = "<group>"; };
 		E4A125131B1E11150098AE3E /* FGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGColor.swift; sourceTree = "<group>"; };
+		E4A125161B1EEBD70098AE3E /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
+		E4A125181B1EF5400098AE3E /* BaseViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Extension.swift"; sourceTree = "<group>"; };
+		E4A1251A1B1EFAC10098AE3E /* ArticleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHeaderView.swift; sourceTree = "<group>"; };
 		E4E5DD3E1B1D0ECC00F068DD /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		E4E5DD401B1D0ECC00F068DD /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		E4E5DD421B1D0ECC00F068DD /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +147,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4A125151B1EEBB20098AE3E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4A125111B1E10E10098AE3E /* Session+FarmersGuide.swift */,
+				E4A125161B1EEBD70098AE3E /* UINavigationBar+Extension.swift */,
+				E4A125181B1EF5400098AE3E /* BaseViewController+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E4E5DD3B1B1D0ECC00F068DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E5DD421B1D0ECC00F068DD /* ArticleTableViewCell.swift */,
+				E4A1251A1B1EFAC10098AE3E /* ArticleHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,10 +205,10 @@
 		E4E5DD431B1D0ECC00F068DD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E4A125151B1EEBB20098AE3E /* Extensions */,
 				E4E5DD441B1D0ECC00F068DD /* AppDelegate.swift */,
 				E49D348E1B1D16780098FCFB /* SplitViewManager.swift */,
 				E4A1250A1B1DEB560098AE3E /* ReadabilityResult.swift */,
-				E4A125111B1E10E10098AE3E /* Session+FarmersGuide.swift */,
 				E4A125131B1E11150098AE3E /* FGColor.swift */,
 			);
 			path = Shared;
@@ -358,7 +375,10 @@
 			files = (
 				E4E5DD481B1D0ECC00F068DD /* AppDelegate.swift in Sources */,
 				E4A1250B1B1DEB560098AE3E /* ReadabilityResult.swift in Sources */,
+				E4A1251B1B1EFAC10098AE3E /* ArticleHeaderView.swift in Sources */,
 				E4A125141B1E11150098AE3E /* FGColor.swift in Sources */,
+				E4A125191B1EF5400098AE3E /* BaseViewController+Extension.swift in Sources */,
+				E4A125171B1EEBD70098AE3E /* UINavigationBar+Extension.swift in Sources */,
 				E4A125121B1E10E10098AE3E /* Session+FarmersGuide.swift in Sources */,
 				E4E5DD451B1D0ECC00F068DD /* Article.swift in Sources */,
 				E4E5DD4A1B1D0F0200F068DD /* ArticleViewController.swift in Sources */,

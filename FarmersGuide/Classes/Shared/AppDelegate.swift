@@ -24,15 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = splitViewManager.splitViewController.detailViewController as! UINavigationController
         navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewManager.splitViewController.displayModeButtonItem()
         
-        let navigationBarFont = Session.AppFont(20, weight: .Regular)
-        
-        UINavigationBar.appearance().tintColor = FGColor.blueColor()
-        //UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:  navigationBarFont]
-        //UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName:  navigationBarFont], forState: UIControlState.Normal)
-        //UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
-        //UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+        AppDelegate.defaultUIAppearance()
         
         return true
+    }
+    
+    class func defaultUIAppearance() {
+        
+        UINavigationBar.appearance().tintColor = FGColor.blueColor()
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage.imageWithColor(UIColor.whiteColor().colorWithAlphaComponent(0.95), size: CGSize(width: 10, height: 10)), forBarMetrics: UIBarMetrics.Default)
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
     }
 
     func applicationWillResignActive(application: UIApplication) {

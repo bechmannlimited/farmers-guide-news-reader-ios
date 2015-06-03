@@ -35,7 +35,7 @@ class Article: JSONObject {
     
     override class func webApiGetMultipleObjects< T : JSONObject >(type: T.Type, completion: (objects:[T]) -> () ) -> JsonRequest? {
         
-        let url = "http://www.bechmann.co.uk/fg/GetJSData.aspx?dt=CategoryArticles&id=1&start=1&rows=20"
+        let url = "http://www.bechmann.co.uk/fg/GetJSData.aspx?dt=CategoryArticles&id=1&start=1&rows=50"
         
         return JsonRequest.create(url, parameters: nil, method: .GET).onDownloadSuccess { (json, request) -> () in
             

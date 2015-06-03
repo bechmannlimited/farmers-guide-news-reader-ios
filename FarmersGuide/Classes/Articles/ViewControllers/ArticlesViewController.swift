@@ -33,6 +33,8 @@ class ArticlesViewController: BaseViewController {
             let selectedCell = tableView.cellForRowAtIndexPath(indexPath)
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
+        
+        setNavigationBarDefault()
     }
     
     override func refresh(refreshControl: UIRefreshControl?) {

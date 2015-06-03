@@ -13,6 +13,7 @@ enum FontWithWeight: String {
     
     case Thin = "AppleSDGothicNeo-Thin"
     case Regular = "AppleSDGothicNeo-Regular"
+    case Bold = "AppleSDGothicNeo-Bold"
 }
 
 extension Session {

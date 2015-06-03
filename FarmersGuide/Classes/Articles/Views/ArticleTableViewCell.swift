@@ -12,7 +12,7 @@ import ABToolKit
 private let kPadding: CGFloat = 10
 private let kUnderneathTitleMargin: CGFloat = 0
 private let kTitleFont = Session.AppFont(17, weight: .Regular)
-private let kDescriptionFont = Session.AppFont(14, weight: .Thin)
+private let kDescriptionFont = Session.AppFont(15, weight: .Thin)
 
 class ArticleTableViewCell: UITableViewCell {
 
