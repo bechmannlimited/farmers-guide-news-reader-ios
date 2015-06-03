@@ -35,7 +35,7 @@ class ArticleViewController: BaseViewController, UIScrollViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        setNavigationBarAppearance(webView.scrollView.contentOffset.y)
+        scrollViewDidScroll(webView.scrollView)
         automaticallyAdjustsScrollViewInsets = false
     }
     
@@ -132,8 +132,7 @@ class ArticleViewController: BaseViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        var extraImageHeight = -(scrollView.contentOffset.y + headerView.frame.height + kHeaderViewMarginBottom)
-        headerView.scrollViewDidScroll(extraImageHeight)
+        headerView.scrollViewDidScroll(scrollView, headerOffset: headerView.frame.height + kHeaderViewMarginBottom)
         
         setNavigationBarAppearance(scrollView.contentOffset.y)
     }
@@ -143,7 +142,7 @@ class ArticleViewController: BaseViewController, UIScrollViewDelegate {
     func setNavigationBarAppearance(offset: CGFloat) {
         
         let y = offset + headerView.frame.height
-        let condition = kHeaderViewHeight + kHeaderViewMarginBottom - (navigationController!.navigationBar.frame.height) - 64 + 20 + 4 - headerView.titleHeight
+        let condition = kHeaderViewHeight + kHeaderViewMarginBottom - (navigationController!.navigationBar.frame.height) - 64 + 20 + 4 //- headerView.titleHeight
         
         if y > condition{
             

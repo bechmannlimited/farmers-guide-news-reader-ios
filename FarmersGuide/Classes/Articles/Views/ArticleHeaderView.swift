@@ -18,8 +18,8 @@ class ArticleHeaderView: UIView {
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark))
     var heroImageView = UIImageView()
     var heroImageConstraints = Dictionary<String, NSLayoutConstraint>()
-    var titleHeight:CGFloat = 0
-    
+    var titleLabel = UILabel()
+    var titleLabelHeight:CGFloat = 0
     
     var article = Article()
     var readabilityResult: ReadabilityResult?
@@ -74,14 +74,13 @@ class ArticleHeaderView: UIView {
     func setupTitle() {
         
         //TITLE
-        var titleLabel = UILabel()
         titleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.addSubview(titleLabel)
         
         let font = Session.AppFont(25, weight: FontWithWeight.Bold)
-        titleHeight = UILabel.heightForLabel(article.Title, font: font, width: self.frame.width - (kTitlePadding * 2))
+        titleLabelHeight = UILabel.heightForLabel(article.Title, font: font, width: self.frame.width - (kTitlePadding * 2))
 
-        titleLabel.addHeightConstraint(relation: .Equal, constant: titleHeight)
+        titleLabel.addHeightConstraint(relation: .Equal, constant: titleLabelHeight)
         titleLabel.addLeftConstraint(toView: self, relation: .Equal, constant: kTitlePadding)
         titleLabel.addRightConstraint(toView: self, relation: .Equal, constant: -kTitlePadding)
         titleLabel.addBottomConstraint(toView: heroImageView, attribute: NSLayoutAttribute.Bottom, relation: .Equal, constant: -kTitlePadding)
@@ -94,7 +93,9 @@ class ArticleHeaderView: UIView {
         titleLabel.textAlignment = NSTextAlignment.Left
     }
 
-    func scrollViewDidScroll(extraImageHeight: CGFloat) {
+    func scrollViewDidScroll(scrollView: UIScrollView, headerOffset: CGFloat) {
+        
+        let extraImageHeight = -(scrollView.contentOffset.y + headerOffset)
         
         if extraImageHeight > 0 {
             
@@ -116,5 +117,16 @@ class ArticleHeaderView: UIView {
         let percentageOpacity:CGFloat = (100 - percentage) / 100
         
         blurView.layer.opacity = Float(percentageOpacity)
+        
+        
+        // fade title 
+        let titleFadeNumber:CGFloat = scrollView.contentOffset.y + headerOffset
+        let fadeMax:CGFloat = 64 - titleLabelHeight / 3
+        
+        let titlePercentage:CGFloat = (titleFadeNumber / fadeMax) * 100
+        let titleOpacity =  (100 - titlePercentage) / 100
+        
+        titleLabel.layer.opacity = Float(titleOpacity)
+        
     }
 }
