@@ -143,7 +143,7 @@ class ArticleViewController: BaseViewController, UIScrollViewDelegate {
     func setNavigationBarAppearance(offset: CGFloat) {
         
         let y = offset + headerView.frame.height
-        let condition = kHeaderViewHeight + kHeaderViewMarginBottom - (navigationController!.navigationBar.frame.height) - 64 + 20 + 4
+        let condition = kHeaderViewHeight + kHeaderViewMarginBottom - (navigationController!.navigationBar.frame.height) - 64 + 20 + 4 - headerView.titleHeight
         
         if y > condition{
             

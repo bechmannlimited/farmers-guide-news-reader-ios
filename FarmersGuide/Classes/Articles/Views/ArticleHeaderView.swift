@@ -18,6 +18,8 @@ class ArticleHeaderView: UIView {
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark))
     var heroImageView = UIImageView()
     var heroImageConstraints = Dictionary<String, NSLayoutConstraint>()
+    var titleHeight:CGFloat = 0
+    
     
     var article = Article()
     var readabilityResult: ReadabilityResult?
@@ -77,9 +79,9 @@ class ArticleHeaderView: UIView {
         self.addSubview(titleLabel)
         
         let font = Session.AppFont(25, weight: FontWithWeight.Bold)
-        let height = UILabel.heightForLabel(article.Title, font: font, width: self.frame.width - (kTitlePadding * 2))
+        titleHeight = UILabel.heightForLabel(article.Title, font: font, width: self.frame.width - (kTitlePadding * 2))
 
-        titleLabel.addHeightConstraint(relation: .Equal, constant: height)
+        titleLabel.addHeightConstraint(relation: .Equal, constant: titleHeight)
         titleLabel.addLeftConstraint(toView: self, relation: .Equal, constant: kTitlePadding)
         titleLabel.addRightConstraint(toView: self, relation: .Equal, constant: -kTitlePadding)
         titleLabel.addBottomConstraint(toView: heroImageView, attribute: NSLayoutAttribute.Bottom, relation: .Equal, constant: -kTitlePadding)
