@@ -9,17 +9,26 @@
 import UIKit
 import ABToolKit
 
-enum FontWithWeight: String {
+private let kMainAppFont = "AppleSDGothicNeo"
+
+//enum AppFont: String {
+//    
+//    case AppleSDGothNeoThin = "AppleSDGothicNeo-Thin"
+//    case AppleSDGothNeoRegular = "AppleSDGothicNeo-Regular"
+//    case AppleSDGothNeoBold = "AppleSDGothicNeo-Bold"
+//}
+
+enum FontWeight : String {
     
-    case Thin = "AppleSDGothicNeo-Thin"
-    case Regular = "AppleSDGothicNeo-Regular"
-    case Bold = "AppleSDGothicNeo-Bold"
+    case Thin = "Thin"
+    case Regular = "Regular"
+    case Bold = "Bold"
 }
 
 extension Session {
     
-    class func AppFont(size: CGFloat, weight: FontWithWeight) -> UIFont {
+    class func AppFont(size: CGFloat, weight: FontWeight) -> UIFont {
         
-        return UIFont(name: weight.rawValue, size: size)!
+        return UIFont(name: "\(kMainAppFont)-\(weight.rawValue)", size: size)!
     }
 }

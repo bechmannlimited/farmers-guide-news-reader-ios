@@ -77,7 +77,7 @@ class ArticleHeaderView: UIView {
         titleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.addSubview(titleLabel)
         
-        let font = Session.AppFont(25, weight: FontWithWeight.Bold)
+        let font = Session.AppFont(25, weight: .Bold)
         titleLabelHeight = UILabel.heightForLabel(article.Title, font: font, width: self.frame.width - (kTitlePadding * 2))
 
         titleLabel.addHeightConstraint(relation: .Equal, constant: titleLabelHeight)
